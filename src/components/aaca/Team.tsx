@@ -1,5 +1,4 @@
-import React from "react";
-import dp from "../../assets/dp.png";
+import Image from "next/image";
 
 const team = [
   {
@@ -32,9 +31,11 @@ export default function Team() {
           {team.map((member) => (
             <li key={member.name}>
               <div className="space-y-6">
-                <img
+                <Image
+                  height={100}
+                  width={100}
                   className="mx-auto h-40 w-40 rounded-full xl:w-56 xl:h-56"
-                  src={dp}
+                  src="/images/dp.png"
                   alt={member.name}
                 />
                 <div className="space-y-2">
